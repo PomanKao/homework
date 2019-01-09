@@ -13,14 +13,16 @@ fun main(args: Array<String>) {
 }
 
 class TicketKotlin(var tickets: Int, var roundTrip: Int) {
+    val ticketFee = 1000
+    val roundTripFee = 2000
 
     fun Fees() {
-        val total = ((tickets - roundTrip) * 1000) + (roundTrip * discountRoundTrip(0.9f))
+        val total = ((tickets - roundTrip) * ticketFee) + (roundTrip * discountRoundTrip(0.9f))
         println("Total tickets: $tickets\nRound-trip: $roundTrip\nTotal: $total")
     }
 
     private fun discountRoundTrip(discount: Float): Int {
-        val discountFee = 2000 * discount
+        val discountFee = roundTripFee * discount
         return discountFee.toInt()
     }
 }
