@@ -10,6 +10,6 @@ public class Tester {
         System.out.print("How many round-trip tickets: ");
         int roundTrip = scanner.nextInt();
         Ticket ticket = new Ticket(tickets, roundTrip);
-        ticket.Fees();
+        ticket.fees();
     }
 }

@@ -14,7 +14,7 @@ public class Ticket {
         roundTripFee = 2000;
     }
 
-    public void Fees() {
+    public void fees() {
         int total;
         total = ((tickets - roundTrip) * ticketFee) + (roundTrip * RoundTripFee(0.9f));
         String printTotal = "Total tickets: " + tickets + "\nRound-trip: " + roundTrip +

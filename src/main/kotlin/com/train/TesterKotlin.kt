@@ -9,14 +9,14 @@ fun main(args: Array<String>) {
     print("How many round-trip tickets: ")
     val roundTrip = scanner.nextInt()
     val ticket = TicketKotlin(tickets, roundTrip)
-    ticket.Fees()
+    ticket.fees()
 }
 
 class TicketKotlin(var tickets: Int, var roundTrip: Int) {
-    val ticketFee = 1000
-    val roundTripFee = 2000
+    private val ticketFee = 1000
+    private val roundTripFee = 2000
 
-    fun Fees() {
+    fun fees() {
         val total = ((tickets - roundTrip) * ticketFee) + (roundTrip * discountRoundTrip(0.9f))
         println("Total tickets: $tickets\nRound-trip: $roundTrip\nTotal: $total")
     }
